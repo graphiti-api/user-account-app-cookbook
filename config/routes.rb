@@ -4,4 +4,7 @@ Rails.application.routes.draw do
     resources :credentials, only: :create
     resources :registrations, only: :create
   end
+
+  get '*path' => 'index#index'
+  root to: 'index#index'
 end

@@ -1,5 +1,15 @@
 {
   "name": "graphiti_auth_sample",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@rails/webpacker": "3.5",
+    "ts-loader": "3.5.0",
+    "typescript": "3.3.1",
+    "vue": "2.6.2",
+    "vue-loader": "14.2.2",
+    "vue-template-compiler": "2.6.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
+  }
 }
