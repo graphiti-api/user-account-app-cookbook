@@ -1,20 +1,27 @@
 <template>
   <div id="app">
-    <p>{{ message }}</p>
+    <navigation/>
+    <div class="container">
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import Navigation from './components/Navigation.vue'
 
 export default Vue.extend({
-  data() {
-    return {
-      message: "Hello Graphiti!"
-    }
+  components: {
+    Navigation
   }
 })
 </script>
+
+<style lang="scss">
+@import "~bootstrap/scss/bootstrap";
+</style>
+
 
 <style scoped>
 p {

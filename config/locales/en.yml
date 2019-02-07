@@ -1,5 +1,12 @@
 en:
   activemodel:
     errors:
-      messages:
-        password_confirmation_mismatch: "Password and Confirmation must match"
+      models:
+        credential:
+          attributes:
+            base:
+              email_unverified: 'You must verify your email address before continuing. Check your email for a confirmation link.'
+        user_registration:
+          attributes:
+            base:
+              password_confirmation_mismatch: "Password and Confirmation must match"
