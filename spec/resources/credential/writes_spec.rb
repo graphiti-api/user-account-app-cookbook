@@ -40,7 +40,7 @@ RSpec.describe CredentialResource, type: :resource do
       it 'is invalid' do
         expect(instance.save).to eq(false)
 
-        expect(instance.data.errors).to be_added(:base, :invalid)
+        expect(instance.data.errors).to be_added(:base, :invalid_credentials)
       end
 
       it 'does not assign the jwt' do

@@ -15,7 +15,7 @@ RSpec.describe "users#show", type: :request do
       user2
     end
 
-    fit 'works' do
+    it 'returns the current user' do
       expect(UserResource).to receive(:find).and_call_original
       make_request
 

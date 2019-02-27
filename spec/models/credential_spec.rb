@@ -45,7 +45,7 @@ RSpec.describe Credential do
       it 'fails with a validation error' do
         instance = create
 
-        expect(instance.errors).to be_added(:base, :invalid)
+        expect(instance.errors).to be_added(:base, :invalid_credentials)
       end
     end
 
@@ -62,7 +62,7 @@ RSpec.describe Credential do
         it 'fails with a validation error' do
           instance = create
 
-          expect(instance.errors).to be_added(:base, :invalid)
+          expect(instance.errors).to be_added(:base, :invalid_credentials)
         end
 
         it 'does not assign the user' do
