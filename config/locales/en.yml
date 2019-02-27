@@ -6,6 +6,7 @@ en:
           attributes:
             base:
               email_unverified: 'You must verify your email address before continuing. Check your email for a confirmation link.'
+              invalid_credentials: 'Invalid username or password.'
         user_registration:
           attributes:
             base:

@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>Hello Graphiti</h1>
-    <pre>{{ $auth.$data }}</pre>
+    <h1 v-if="$auth.currentUser">Hello {{ $auth.currentUser.name }}</h1>
+    <h1 v-else>Hello Graphiti Guest</h1>
   </div>
 </template>
 

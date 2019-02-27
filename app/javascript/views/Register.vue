@@ -9,6 +9,7 @@
       </div>
       <text-input
         label="Email Address"
+        type="email"
         v-model="registration.email"
         :error="registration.errors.email"
       />

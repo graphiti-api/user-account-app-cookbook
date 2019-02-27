@@ -23,6 +23,7 @@ end
 RSpec.configure do |config|
   config.include GraphitiSpecHelpers::RSpec
   config.include GraphitiSpecHelpers::Sugar
+  config.include AuthHeaderHelper
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   # config.fixture_path = "#{::Rails.root}/spec/fixtures"

@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def show
     params[:id] = current_user.id
 

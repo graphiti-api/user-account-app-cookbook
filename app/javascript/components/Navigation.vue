@@ -1,15 +1,14 @@
 <template>
-  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <nav class="navbar navbar-expand navbar-light bg-light">
     <router-link class="navbar-brand" :to="{name: 'home'}" >Graphiti Demo</router-link>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-collapse">
       <ul class="navbar-nav mr-auto">
       </ul>
       <ul
         v-if='$auth.currentUser'
-        class="navbar-nav"
+        key='signedInRoutes'
+        class="navbar-nav logged-in"
       >
-        <router-link to='/'/>
-        <router-link to='/'/>
         <router-link tag="li" :to="{ name: 'profile' }" class="nav-item">
           <a class="nav-link profile-link">
             <img
@@ -25,7 +24,8 @@
       </ul>
       <ul
         v-else
-        class="navbar-nav"
+        key='signedOutRoutes'
+        class="navbar-nav logged-out"
       >
         <router-link tag="li" :to="{ name: 'register' }" class="nav-item">
           <a class="nav-link">Register</a>
@@ -37,6 +37,23 @@
     </div>
   </nav>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  data() {
+    return {
+      bool: false
+    }
+  },
+  computed: {
+    signedIn(): boolean {
+      return !!this.$auth.currentUser
+    }
+  }
+})
+</script>
+
 
 <style lang="scss" scoped>
 .profile-link {

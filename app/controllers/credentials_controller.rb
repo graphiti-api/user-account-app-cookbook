@@ -1,4 +1,6 @@
 class CredentialsController < ApplicationController
+  skip_before_action :authenticate_user!
+
   def create
     credential = CredentialResource.build(params)
 

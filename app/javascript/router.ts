@@ -51,7 +51,7 @@ const router =  new VueRouter({
     {
       path:'/profile',
       name: 'profile',
-      // component: () => import('./views/Register.vue')
+      component: () => import('./views/Profile.vue'),
     },
   ]
 })

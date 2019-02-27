@@ -34,10 +34,10 @@ class Credential
               credential.errors.add(:base, :email_unverified)
             end
           else
-            credential.errors.add(:base, :invalid)
+            credential.errors.add(:base, :invalid_credentials)
           end
         else
-          credential.errors.add(:base, :invalid)
+          credential.errors.add(:base, :invalid_credentials)
         end
       end
     end
