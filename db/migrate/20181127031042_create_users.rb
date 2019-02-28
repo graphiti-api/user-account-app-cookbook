@@ -7,7 +7,6 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :password_hash, null: false
 
       t.datetime :email_verified_at
-      t.string   :email_verification_token
 
       t.timestamps
     end

@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2018_11_27_031042) do
     t.string "name", null: false
     t.string "password_hash", null: false
     t.datetime "email_verified_at"
-    t.string "email_verification_token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
