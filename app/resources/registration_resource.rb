@@ -10,4 +10,8 @@ class RegistrationResource < ApplicationResource
   def create(attributes)
     UserRegistration.create(attributes)
   end
+
+  after_commit only: :create do |registration|
+    UserMailer.account_activation(registration.user).deliver_later
+  end
 end

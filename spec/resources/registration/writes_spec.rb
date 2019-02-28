@@ -35,8 +35,12 @@ RSpec.describe RegistrationResource, type: :resource do
       it 'enqueues an activation email' do
         expect {
           instance.save
-        }.to have_enqueued_job(ActionMailer::DeliveryJob)
-          .with("UserMailer", "account_activation", 'deliver_now', anything)
+        }.to have_enqueued_job(ActionMailer::DeliveryJob).with { |mailer, email, timing, model|
+          expect(mailer).to eq 'UserMailer'
+          expect(email).to eq 'account_activation'
+          expect(timing).to eq 'deliver_now'
+          expect(model).to eq instance.data.user
+        }
       end
     end
   end

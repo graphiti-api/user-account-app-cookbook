@@ -49,6 +49,20 @@ const router =  new VueRouter({
       }
     },
     {
+      path:'/account_activations/success',
+      component: () => import('./views/AccountActivationConfirmation.vue'),
+      meta: {
+        skipAuthentication: true
+      }
+    },
+    {
+      path:'/account_activations/error',
+      component: () => import('./views/AccountActivationError.vue'),
+      meta: {
+        skipAuthentication: true
+      }
+    },
+    {
       path:'/profile',
       name: 'profile',
       component: () => import('./views/Profile.vue'),

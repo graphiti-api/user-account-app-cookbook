@@ -27,6 +27,17 @@ RSpec.describe Credential do
         expect(Credential.load(jwt)).to be_nil
       end
     end
+
+    context 'when the jwt is encoded with no signing' do
+      it 'does not decode as valid' do
+        cred = Credential.new(user: user)
+
+        data, _ = JWT.decode cred.mint_jwt, Credential.secret
+        jwt = JWT.encode data, nil, 'none'
+
+        expect(Credential.load(jwt)).to be_nil
+      end
+    end
   end
 
   describe '.create' do

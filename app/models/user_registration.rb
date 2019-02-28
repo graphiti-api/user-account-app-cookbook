@@ -29,11 +29,7 @@ class UserRegistration
 
   def save!
     return false unless valid?
-    user.save!.tap do |result|
-      if result
-        UserMailer.account_activation(user).deliver_later
-      end
-    end
+    user.save!
   end
 
   delegate :id, to: :user
