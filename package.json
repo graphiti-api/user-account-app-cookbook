@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
-    "bootstrap": "4.2.1",
+    "bootstrap": "4.3.1",
     "spraypaint": "0.5.0",
     "ts-loader": "3.5.0",
     "typescript": "3.3.1",
