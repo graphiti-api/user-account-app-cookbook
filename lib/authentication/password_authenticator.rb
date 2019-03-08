@@ -23,7 +23,7 @@ module Authentication
     end
 
     def self.app_pepper
-      Rails.application.credentials.authentication[:pepper]
+      Rails.application.secrets.authentication[:pepper]
     end
   end
 end

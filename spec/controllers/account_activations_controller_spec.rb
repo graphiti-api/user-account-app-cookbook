@@ -16,7 +16,7 @@ RSpec.describe AccountActivationsController, type: :request do
     it 'updates the user verification field' do
       make_request
 
-      expect(user.reload.email_verified_at).to eq Time.now
+      expect(user.reload.email_verified_at.to_i).to eq Time.now.to_i
     end
 
     it 'redirects to a success page' do
@@ -33,7 +33,7 @@ RSpec.describe AccountActivationsController, type: :request do
       it 'does not update the verified timestamp' do
         make_request
 
-        expect(user.reload.email_verified_at).to eq 2.years.ago
+        expect(user.reload.email_verified_at.to_i).to eq 2.years.ago.to_i
       end
     end
   end

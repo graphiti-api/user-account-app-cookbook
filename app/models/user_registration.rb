@@ -6,7 +6,6 @@ class UserRegistration
   attr_reader :user
 
   validates :name, presence: true
-  validates :name, presence: true
   validates_with PasswordPolicyValidator
 
   validate :validate_children

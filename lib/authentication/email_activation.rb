@@ -36,7 +36,7 @@ module Authentication
     end
 
     def self.secret
-      Rails.application.credentials.secret_key_base
+      GraphitiAuthSample::SECRET_KEY_BASE
     end
   end
 end

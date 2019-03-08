@@ -7,7 +7,7 @@ class Credential
   class << self
 
     def secret
-      Rails.application.credentials.secret_key_base
+      GraphitiAuthSample::SECRET_KEY_BASE
     end
 
     def load(jwt)
